@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_uts/pages/listMenu.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -14,10 +15,17 @@ class Home extends StatelessWidget {
           children: <Widget>[
             Expanded(
             child: RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ListMenu(),
+                  )
+                );
+              },
               child:  Text(
                 "List Menu",
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 14)
               ),
             )
           ),

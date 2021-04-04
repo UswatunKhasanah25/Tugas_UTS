@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/home.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
        primarySwatch: Colors.brown,
       ),
       home: Scaffold (
-        backgroundColor: Colors.brown[50],
+        backgroundColor: Colors.brown[100],
         appBar: AppBar(
           title: Text("Resto Uswa")
         ),
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.all(8),
               child: Column(
                 children: <Widget>[
-                  Home()
+                  Home(),
                 ],
               )
             ),
