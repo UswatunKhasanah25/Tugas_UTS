@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_uts/pages/listMenu.dart';
+import 'package:tugas_uts/pages/listKategori.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -31,7 +32,14 @@ class Home extends StatelessWidget {
           ),
           Expanded(
             child: RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ListKategori(),
+                  )
+                );
+              },
               child:  Text(
                 "List Kategori",
                 style: TextStyle(fontSize: 14),
