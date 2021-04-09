@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:async';
 import 'package:tugas_uts/models/dbhelperKtgr.dart';
-import 'package:tugas_uts/models/item.dart';
-import 'package:tugas_uts/pages/home.dart';
 import 'package:tugas_uts/models/itemK.dart';
 import 'package:tugas_uts/pages/tambahKtgr.dart';
 
@@ -21,7 +19,7 @@ class ListKategoriState extends State<ListKategori> {
   @override
   void initState() {
     super.initState();
-    updateListView();
+    updateListView(); //memanggil fungsi untuk dieksekusi
   }
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,7 @@ class ListKategoriState extends State<ListKategori> {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-        title: Text('Daftar List Menu'),
+        title: Text('Daftar List Kategori'),
     ),
     body: Column(children : [
       Expanded(child: 

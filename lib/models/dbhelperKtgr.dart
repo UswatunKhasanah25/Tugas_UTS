@@ -20,7 +20,7 @@ class DbHelperKtgr {
     return itemDatabase;
   }
 
-  //buat tabel baru dengan nama item
+  //buat tabel baru dengan nama itemK
   void _createDb(Database db, int version) async {
     await db.execute('''
     CREATE TABLE itemK (

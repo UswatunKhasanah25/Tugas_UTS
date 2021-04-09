@@ -27,6 +27,7 @@ class DbHelperMenu {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       kode TEXT,
       menu TEXT,
+      kategori TEXT,
       harga INTEGER
     )
     ''');

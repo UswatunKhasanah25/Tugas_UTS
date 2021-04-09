@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Resto Uswa")
         ),
-          body: SingleChildScrollView (
+          body: SingleChildScrollView ( //agar halaman bisa di scroll
             child: Container(
               padding: EdgeInsets.all(8),
               child: Column(
                 children: <Widget>[
-                  Home(),
+                  Home(), //memanggil widget home untuk di eksekusi
                 ],
               )
             ),

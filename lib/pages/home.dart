@@ -17,7 +17,8 @@ class Home extends StatelessWidget {
             Expanded(
             child: RaisedButton(
               onPressed: (){
-                Navigator.push(
+                //memanggil widget lain agar bisa saling terhubung dengan widget ini ketika memilih button tersebut
+                Navigator.push( 
                   context, 
                   MaterialPageRoute(
                     builder: (context) => ListMenu(),
@@ -33,6 +34,7 @@ class Home extends StatelessWidget {
           Expanded(
             child: RaisedButton(
               onPressed: (){
+                //memanggil widget lain agar bisa saling terhubung dengan widget ini ketika memilih button tersebut
                 Navigator.push(
                   context, 
                   MaterialPageRoute(

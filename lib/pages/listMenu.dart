@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:async';
 import 'package:tugas_uts/models/dbhelperMenu.dart';
-import 'package:tugas_uts/pages/home.dart';
 import 'package:tugas_uts/models/item.dart';
 import 'package:tugas_uts/pages/tambahMenu.dart';
 
@@ -90,6 +89,7 @@ class ListMenuState extends State<ListMenu> {
             subtitle: 
                 Text(
                   (this.itemList[index].menu) +
+                  ("\nKategori : "+this.itemList[index].kategori) +
                   "\nHarga : Rp."+this.itemList[index].harga.toString()
                 ),
             trailing: GestureDetector(

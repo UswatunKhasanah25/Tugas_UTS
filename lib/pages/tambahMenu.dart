@@ -16,6 +16,7 @@ class TambahMenuState extends State<TambahMenu> {
  
  TextEditingController kodeController = TextEditingController();
  TextEditingController menuController = TextEditingController();
+ TextEditingController kategoriController = TextEditingController();
  TextEditingController hargaController = TextEditingController();
 
  
@@ -25,6 +26,7 @@ class TambahMenuState extends State<TambahMenu> {
   if (item != null) {
     kodeController.text = item.kode;
     menuController.text = item.menu;
+    kategoriController.text = item.kategori;
     hargaController.text = item.harga.toString();
   }
   //rubah   
@@ -56,7 +58,7 @@ class TambahMenuState extends State<TambahMenu> {
       ),
     ),
 
-    // nama
+    // menu
      Padding (
       padding: EdgeInsets.only(top:20.0, bottom:20.0),
       child: TextField(
@@ -74,6 +76,24 @@ class TambahMenuState extends State<TambahMenu> {
       ),
     ),
     
+    // kategori
+     Padding (
+      padding: EdgeInsets.only(top:20.0, bottom:20.0),
+      child: TextField(
+        controller: kategoriController,
+        keyboardType: TextInputType.text,
+        decoration: InputDecoration(
+          labelText: 'Kategori',
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5.0),
+          ),
+        ),
+        onChanged: (value) {
+        //
+        },
+      ),
+    ),
+
     // harga
     Padding (
       padding: EdgeInsets.only(top:20.0, bottom:20.0),
@@ -108,11 +128,12 @@ class TambahMenuState extends State<TambahMenu> {
             onPressed: () {
               if (item == null) {
                 // tambah data
-                item = Item(kodeController.text, menuController.text, int.parse(hargaController.text));
+                item = Item(kodeController.text, menuController.text, kategoriController.text, int.parse(hargaController.text));
               } else {
                 // ubah data
                 item.kode = kodeController.text;
                 item.menu = menuController.text;
+                item.kategori = kategoriController.text;
                 item.harga = int.parse(hargaController.text);
               }
             // kembali ke layar sebelumnya dengan membawa objek item
